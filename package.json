@@ -86,5 +86,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "@didask/ckeditor5-hr": "https://github.com/Didask/ckeditor5-hr.git"
   }
 }

@@ -30,7 +30,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import HR from '@didask/ckeditor5-hr/src/hr';
 import HRToolbar from '@didask/ckeditor5-hr/src/hrtoolbar';
-import HRVisibility from '@didask/ckeditor5-hr/src/hrvisibility';
+// import HRVisibility from '@didask/ckeditor5-hr/src/hrvisibility';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -58,8 +58,7 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	HR,
-	HRToolbar,
-	HRVisibility
+	HRToolbar
 ];
 
 // Editor configuration.
@@ -97,11 +96,11 @@ ClassicEditor.defaultConfig = {
 			'mergeTableCells'
 		]
 	},
-	hr: {
-    toolbar: [
-			'hrVisibility:toggle'
-		]
-	},
-// This value must be kept in sync with the language defined in webpack.config.js.
+	// hr: {
+	// 	toolbar: [
+	// 		'hrVisibility:toggle'
+	// 	]
+	// },
+	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'he'
 };

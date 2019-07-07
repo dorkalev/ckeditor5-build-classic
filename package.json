@@ -88,6 +88,7 @@
     }
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-alignment": "^11.1.2",
     "@didask/ckeditor5-hr": "https://github.com/Didask/ckeditor5-hr.git"
   }
 }

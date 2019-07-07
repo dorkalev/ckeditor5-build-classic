@@ -27,6 +27,7 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 import HR from '@didask/ckeditor5-hr/src/hr';
 import HRToolbar from '@didask/ckeditor5-hr/src/hrtoolbar';
@@ -36,6 +37,7 @@ export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
+	Alignment,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
@@ -67,6 +69,8 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'alignment:left',
+			'alignment:right',
 			'bold',
 			'italic',
 			'link',
@@ -97,9 +101,9 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	// hr: {
-	// 	toolbar: [
-	// 		'hrVisibility:toggle'
-	// 	]
+	//	 toolbar: [
+	//		 'hrVisibility:toggle'
+	//	 ]
 	// },
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'he'

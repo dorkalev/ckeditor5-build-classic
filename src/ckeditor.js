@@ -83,7 +83,6 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'undo',
 			'redo',
-      'mediaEmbed'
 		]
 	},
 	image: {

@@ -56,7 +56,6 @@ class InsertImage extends Plugin {
 
 			// Callback executed once the image is clicked.
 			view.on( 'execute', () => {
-				const imageURL = prompt( 'Image URL' );
 			} );
 
 			return view;
@@ -73,6 +72,7 @@ ClassicEditor.builtinPlugins = [
 	Italic,
 	BlockQuote,
 	CKFinder,
+	InsertImage,
 	EasyImage,
 	Heading,
 	Image,
@@ -101,8 +101,8 @@ ClassicEditor.defaultConfig = {
 			// 'alignment:right',
 			'bold',
 			'italic',
-'insertImage',			
-'link',
+			'insertImage',
+			'link',
 			'bulletedList',
 			'numberedList',
 			'imageUpload',
@@ -112,7 +112,6 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'undo',
 			'redo'
-			,
 		]
 	},
 	image: {

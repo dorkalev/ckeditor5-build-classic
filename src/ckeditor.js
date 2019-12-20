@@ -35,6 +35,34 @@ import HRToolbar from '@didask/ckeditor5-hr/src/hrtoolbar';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
+import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
+
+import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
+
+import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
+
+class InsertImage extends Plugin {
+	init() {
+		const editor = this.editor;
+
+		editor.ui.componentFactory.add( 'insertImage', locale => {
+			const view = new ButtonView( locale );
+
+			view.set( {
+				label: 'Insert image',
+				icon: imageIcon,
+				tooltip: true
+			} );
+
+			// Callback executed once the image is clicked.
+			view.on( 'execute', () => {
+				const imageURL = prompt( 'Image URL' );
+			} );
+
+			return view;
+		} );
+	}
+}
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
 	// Alignment,
@@ -73,7 +101,8 @@ ClassicEditor.defaultConfig = {
 			// 'alignment:right',
 			'bold',
 			'italic',
-			'link',
+'insertImage',			
+'link',
 			'bulletedList',
 			'numberedList',
 			'imageUpload',
@@ -82,7 +111,8 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo',
+			'redo'
+			,
 		]
 	},
 	image: {

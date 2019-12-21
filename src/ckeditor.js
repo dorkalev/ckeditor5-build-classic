@@ -56,6 +56,8 @@ class InsertImage extends Plugin {
 
 			// Callback executed once the image is clicked.
 			view.on( 'execute', () => {
+				const x = editor.document.getElementsByClassName( '.new_story_image_gallery_wrapper' );
+				x[ 0 ].style.display = 'flex';
 			} );
 
 			return view;

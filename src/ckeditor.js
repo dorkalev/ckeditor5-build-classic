@@ -35,7 +35,7 @@ import HRToolbar from '@didask/ckeditor5-hr/src/hrtoolbar';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
-import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
+import imageIcon from './unsplash.svg';
 
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 

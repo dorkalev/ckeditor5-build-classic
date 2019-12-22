@@ -49,7 +49,7 @@ class InsertImage extends Plugin {
 			const view = new ButtonView( locale );
 
 			view.set( {
-				label: 'Insert image',
+				label: 'Unsplash Image Gallery',
 				icon: imageIcon,
 				tooltip: true
 			} );
